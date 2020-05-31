@@ -5,87 +5,168 @@ namespace Rede;
 
 class SubMerchant
 {
-    /**
-     * @var string
-     */
-    private $mcc;
 
-    /**
-     * @var string
-     */
-    private $city;
-
-    /**
-     * @var string
-     */
-    private $country;
+    private $Mcc;
+    private $City;
+    private $Country;
+    private $SubMerchantID;
+    private $Address;
+    private $State;
+    private $Cep;
+    private $Cnpj;
 
     /**
      * SubMerchant constructor.
-     *
-     * @param $mcc
-     * @param $city
-     * @param $country
+     * @param $Mcc
+     * @param $City
+     * @param $Country
+     * @param $SubMerchantID
+     * @param $Address
+     * @param $State
+     * @param $Cep
+     * @param $Cnpj
      */
-    public function __construct($mcc, $city, $country)
+    public function __construct($Mcc, $City, $Country, $SubMerchantID, $Address, $State, $Cep, $Cnpj)
     {
-        $this->setMcc($mcc);
-        $this->setCity($city);
-        $this->setCountry($country);
+        $this->Mcc = $Mcc;
+        $this->City = $City;
+        $this->Country = $Country;
+        $this->SubMerchantID = $SubMerchantID;
+        $this->Address = $Address;
+        $this->State = $State;
+        $this->Cep = $Cep;
+        $this->Cnpj = $Cnpj;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getMcc()
     {
-        return $this->mcc;
+        return $this->Mcc;
     }
 
     /**
-     * @param string $mcc
-     * @return SubMerchant
+     * @param mixed $Mcc
      */
-    public function setMcc($mcc)
+    public function setMcc($Mcc)
     {
-        $this->mcc = $mcc;
-        return $this;
+        $this->Mcc = $Mcc;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getCity()
     {
-        return $this->city;
+        return $this->City;
     }
 
     /**
-     * @param string $city
-     * @return SubMerchant
+     * @param mixed $City
      */
-    public function setCity($city)
+    public function setCity($City)
     {
-        $this->city = $city;
-        return $this;
+        $this->City = $City;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
     public function getCountry()
     {
-        return $this->country;
+        return $this->Country;
     }
 
     /**
-     * @param string $country
-     * @return SubMerchant
+     * @param mixed $Country
      */
-    public function setCountry($country)
+    public function setCountry($Country)
     {
-        $this->country = $country;
-        return $this;
+        $this->Country = $Country;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSubMerchantID()
+    {
+        return $this->SubMerchantID;
+    }
+
+    /**
+     * @param mixed $SubMerchantID
+     */
+    public function setSubMerchantID($SubMerchantID)
+    {
+        $this->SubMerchantID = $SubMerchantID;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->Address;
+    }
+
+    /**
+     * @param mixed $Address
+     */
+    public function setAddress($Address)
+    {
+        $this->Address = $Address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getState()
+    {
+        return $this->State;
+    }
+
+    /**
+     * @param mixed $State
+     */
+    public function setState($State)
+    {
+        $this->State = $State;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCep()
+    {
+        return $this->Cep;
+    }
+
+    /**
+     * @param mixed $Cep
+     */
+    public function setCep($Cep)
+    {
+        $this->Cep = $Cep;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCnpj()
+    {
+        return $this->Cnpj;
+    }
+
+    /**
+     * @param mixed $Cnpj
+     */
+    public function setCnpj($Cnpj)
+    {
+        $this->Cnpj = $Cnpj;
+    }
+
+
+
 
 }

@@ -1,6 +1,6 @@
 {
-  "name": "developersrede/erede-php",
-  "version": "4.2.1",
+  "name": "asteroidetecnologia/erede-php",
+  "version": "1.0",
   "description": "e.Rede integration SDK",
   "minimum-stability": "stable",
   "license": "MIT",
@@ -20,6 +20,10 @@
     }
   },
   "authors": [
+    {
+      "name": "Paulo Fernandes",
+      "email": "paulofernandesjr@gmail.com"
+    },
     {
       "name": "João Batista Neto",
       "email": "neto.joaobatista@gmail.com"
