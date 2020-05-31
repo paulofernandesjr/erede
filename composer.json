@@ -2,7 +2,7 @@
   "name": "asteroidetecnologia/erede-php",
   "version": "1.0",
   "description": "e.Rede integration SDK",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "MIT",
   "type": "library",
   "require": {
