@@ -1,29 +1,26 @@
 {
-  "name": "asteroidetecnologia/erede",
-  "version": "1.0",
+  "name": "developersrede/erede-php",
+  "version": "5.0.0",
   "description": "e.Rede integration SDK",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "MIT",
   "type": "library",
   "require": {
-    "php": ">=5.6",
+    "php": ">=7.2",
     "ext-curl": "*",
     "ext-json": "*",
-    "psr/log":"^1.1"
+    "psr/log": "^1.1",
+    "monolog/monolog": "*"
   },
-  "suggest": {
-    "monolog/monolog": "Allows more advanced logging of the application flow"
+  "require-dev": {
+    "phpunit/phpunit": "*"
   },
   "autoload": {
     "psr-4": {
-      "Rede\\": "src//Rede"
+      "Rede\\": "src/Rede"
     }
   },
   "authors": [
-    {
-      "name": "Paulo Fernandes",
-      "email": "paulofernandesjr@gmail.com"
-    },
     {
       "name": "João Batista Neto",
       "email": "neto.joaobatista@gmail.com"
