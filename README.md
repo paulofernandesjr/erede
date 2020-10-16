@@ -199,7 +199,12 @@ $transaction = (new Transaction(20.99, 'pedido' . time()))->creditCard(
     new SubMerchant(
        '1234',
        'São Paulo',
-       'Brasil'
+       'BRA',
+       '123ASDFA123',
+       'Rua Acre',
+       'SP',
+       '07064-010',
+       '71.789.371/0001-42'
     )
 );
 
