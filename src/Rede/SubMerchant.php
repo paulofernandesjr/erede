@@ -19,31 +19,6 @@ class SubMerchant
      * @var string
      */
     private $country;
-    
-    /**
-     * @var string
-     */
-    private $subMerchantID;
-
-    /**
-     * @var string
-     */
-    private $address;
-
-    /**
-     * @var string
-     */
-    private $state;
-
-    /**
-     * @var string
-     */
-    private $cep;
-
-    /**
-     * @var string
-     */
-    private $cnpj;
 
     /**
      * SubMerchant constructor.
@@ -52,16 +27,11 @@ class SubMerchant
      * @param $city
      * @param $country
      */
-    public function __construct($mcc, $city, $country, $subMerchantID, $address, $state, $cep, $cnpj)
+    public function __construct($mcc, $city, $country)
     {
         $this->setMcc($mcc);
         $this->setCity($city);
         $this->setCountry($country);
-        $this->setSubMerchantID($subMerchantID);
-        $this->setAddress($address);
-        $this->setState($state);
-        $this->setCep($cep);
-        $this->setCnpj($cnpj);
     }
 
     /**
@@ -118,101 +88,6 @@ class SubMerchant
     public function setCountry($country)
     {
         $this->country = $country;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSubMerchantID()
-    {
-        return $this->subMerchantID;
-    }
-
-    /**
-     * @param string $subMerchantID
-     *
-     * @return SubMerchant
-     */
-    public function setSubMerchantID($subMerchantID)
-    {
-        $this->subMerchantID = $subMerchantID;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param string $address
-     *
-     * @return SubMerchant
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getState()
-    {
-        return $this->state;
-    }
-    
-    /**
-     * @param string $state
-     *
-     * @return SubMerchant
-     */
-    public function setState($state)
-    {
-        $this->state = $state;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCep()
-    {
-        return $this->cep;
-    }
-
-    /**
-     * @param string $cep
-     *
-     * @return SubMerchant
-     */
-    public function setCep($cep)
-    {
-        $this->cep = $cep;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCnpj()
-    {
-        return $this->cnpj;
-    }
-
-    /**
-     * @param string $cnpj
-     *
-     * @return SubMerchant
-     */
-    public function setCnpj($cnpj)
-    {
-        $this->cnpj = $cnpj;
         return $this;
     }
 
