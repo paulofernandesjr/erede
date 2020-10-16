@@ -44,7 +44,7 @@ abstract class AbstractTransactionsService extends AbstractService
      */
     public function execute()
     {
-        return $this->sendRequest(json_encode($this->transaction), AbstractService::POST);
+        return $this->sendRequest($this->prepareBody(), AbstractService::POST);
     }
 
     /**
@@ -105,5 +105,27 @@ abstract class AbstractTransactionsService extends AbstractService
         }
 
         return $this->transaction;
+    }
+
+    /**
+     * @return string
+     * @throws \InvalidArgumentException
+     * @throws \RuntimeException
+     * @throws \Rede\Exception\RedeException
+     */
+    private function prepareBody()
+    {
+        $body = json_decode(json_encode($this->transaction), true);
+        $body['SubMerchant'] = [];
+        $body['SubMerchant']['MCC'] = $this->transaction->getSubMerchant()->getMcc();
+        $body['SubMerchant']['SubMerchantID'] = $this->transaction->getSubMerchant()->getSubMerchantID();
+        $body['SubMerchant']['Address'] = $this->transaction->getSubMerchant()->getAddress();
+        $body['SubMerchant']['City'] = $this->transaction->getSubMerchant()->getCity();
+        $body['SubMerchant']['State'] = $this->transaction->getSubMerchant()->getState();
+        $body['SubMerchant']['Country'] = $this->transaction->getSubMerchant()->getCountry();
+        $body['SubMerchant']['Cep'] = $this->transaction->getSubMerchant()->getCep();
+        $body['SubMerchant']['Cnpj'] = $this->transaction->getSubMerchant()->getCnpj();
+
+        return json_encode($body);
     }
 }

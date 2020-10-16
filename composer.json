@@ -1,6 +1,6 @@
 {
   "name": "asteroidetecnologia/erede",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Clone of e.Rede integration SDK",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "php": ">=7.2",
     "ext-curl": "*",
     "ext-json": "*",
-    "psr/log":"^1.1"
+    "psr/log": "^1.1"
   },
   "suggest": {
     "monolog/monolog": "Allows more advanced logging of the application flow"
