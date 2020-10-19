@@ -119,14 +119,14 @@ abstract class AbstractTransactionsService extends AbstractService
 
         if ($this->transaction->getSubMerchant()) {
             $body['SubMerchant'] = [];
-            $body['SubMerchant']['MCC'] = $this->transaction->getSubMerchant()->getMcc();
-            $body['SubMerchant']['SubMerchantID'] = $this->transaction->getSubMerchant()->getSubMerchantID();
-            $body['SubMerchant']['Address'] = $this->transaction->getSubMerchant()->getAddress();
-            $body['SubMerchant']['City'] = $this->transaction->getSubMerchant()->getCity();
-            $body['SubMerchant']['State'] = $this->transaction->getSubMerchant()->getState();
-            $body['SubMerchant']['Country'] = $this->transaction->getSubMerchant()->getCountry();
-            $body['SubMerchant']['Cep'] = $this->transaction->getSubMerchant()->getCep();
-            $body['SubMerchant']['Cnpj'] = $this->transaction->getSubMerchant()->getCnpj();
+            $body['SubMerchant']['MCC'] = substr($this->transaction->getSubMerchant()->getMcc(), 0, 4);
+            $body['SubMerchant']['SubMerchantID'] = substr($this->transaction->getSubMerchant()->getSubMerchantID(), 0, 15);
+            $body['SubMerchant']['Address'] = substr($this->transaction->getSubMerchant()->getAddress(), 0, 48);
+            $body['SubMerchant']['City'] = substr($this->transaction->getSubMerchant()->getCity(), 0, 13);
+            $body['SubMerchant']['State'] = substr($this->transaction->getSubMerchant()->getState(), 0, 2);
+            $body['SubMerchant']['Country'] = substr($this->transaction->getSubMerchant()->getCountry(), 0, 3);
+            $body['SubMerchant']['Cep'] = substr($this->transaction->getSubMerchant()->getCep(), 0, 9);
+            $body['SubMerchant']['Cnpj'] = substr($this->transaction->getSubMerchant()->getCnpj(), 0, 18);
         }
 
         return json_encode($body);
