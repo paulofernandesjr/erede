@@ -116,6 +116,10 @@ abstract class AbstractTransactionsService extends AbstractService
     private function prepareBody()
     {
         $body = json_decode(json_encode($this->transaction), true);
+        
+        if ($this->transaction->getPaymentFacilitatorID()) {
+            $body['PaymentFacilitatorID'] = $this->transaction->getPaymentFacilitatorID();
+        }
 
         if ($this->transaction->getSubMerchant()) {
             $body['SubMerchant'] = [];
